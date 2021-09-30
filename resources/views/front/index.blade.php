@@ -4,7 +4,7 @@
 
     <div class="content-wrapper" style="padding-bottom: 0;">
         <div class="container">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
             <div class="col-xl-8 stretch-card grid-margin">
             <div class="position-relative">
                 <img
@@ -37,7 +37,9 @@
                     <div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between">
                         <div class="pr-3" style="flex: 75%;">
                         <h5>
-                            {{ $news_article->title }}
+                            <a href="{{ route('page.article', [$news_article->id]) }}">
+                                {{ $news_article->title }}
+                            </a>
                         </h5>
                         <div class="fs-12">
                             {{ $news_article->created_at->diffForHumans(now())}}
@@ -55,7 +57,7 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-up">
             <div class="col-lg-3 stretch-card grid-margin">
             <div class="card">
                 <div class="card-body">
@@ -107,7 +109,7 @@
             </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-up">
             <div class="col-sm-12 grid-margin">
             <div class="card">
                 <div class="card-body">
@@ -314,7 +316,7 @@
             </div>
             </div>
         </div>
-        <div class="row" style="margin-bottom: 35px;">
+        <div class="row" data-aos="fade-up" style="margin-bottom: 35px;">
             <div class="col-sm-12">
             <div class="card">
                 <div class="card-body">

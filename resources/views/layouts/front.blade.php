@@ -276,8 +276,8 @@
     <script src="{{ asset('assets/front-end/vendors/aos/dist/aos.js/aos.js') }}"></script>
     <!-- End plugin js for this page -->
     <!-- Custom js for this page-->
-    <script src="./{{ asset('assets/front-end/js/demo.js') }}"></script>
-    <script src="./{{ asset('assets/front-end/js/jquery.easeScroll.js') }}"></script>
+    <script src="{{ asset('assets/front-end/js/demo.js') }}"></script>
+    <script src="{{ asset('assets/front-end/js/jquery.easeScroll.js') }}"></script>
     <!-- End custom js for this page-->
   </body>
 </html>

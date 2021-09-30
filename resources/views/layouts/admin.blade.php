@@ -17,9 +17,10 @@
 
     @if(app()->getLocale() == 'ar')
         <!-- Bootstrap 4 RTL -->
-        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('assets/admin/plugins/tempusdominus-bootstrap-4-rtl/css/tempusdominus-bootstrap-4.min.css') }}">
         <!-- Theme style -->
         <link rel="stylesheet" href="{{ asset('assets/admin/css/adminlte-rtl.min.css') }}">
+        <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css">
         <!-- Custom style for RTL -->
         <link rel="stylesheet" href="{{ asset('assets/admin/css/custom.css') }}">
         <!-- Google Font: Source Cairo font -->
@@ -27,8 +28,8 @@
         @else
             <!-- Theme style -->
             <link rel="stylesheet" href="{{ asset('assets/admin/css/adminlte.min.css') }}">
-  <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet"  href="{{ asset('assets/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+            <!-- Tempusdominus Bootstrap 4 -->
+            <link rel="stylesheet"  href="{{ asset('assets/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
 
     @endif
 </head>
@@ -187,7 +188,7 @@
           <a href="#" class="d-block">Alexander Pierce</a>
         </div>
       </div>
-
+{{--
       <!-- SidebarSearch Form -->
       <div class="form-inline">
         <div class="input-group" data-widget="sidebar-search">
@@ -198,7 +199,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> --}}
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -237,9 +238,38 @@
               </p>
             </a>
           </li>  --}}
+          {{-- <li class="nav-item has-treeview">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview" style="display: none;">
+              <li class="nav-item">
+                <a href="./index.html" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v1</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index2.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v2</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dashboard v3</p>
+                </a>
+              </li>
+            </ul>
+          </li> --}}
           <li class="nav-item">
-            <a href="{{ route('admin.dashboard') }}" class="nav-link">
-              <i class="far fa-circle nav-icon"></i>
+            <a href="{{ route('admin.dashboard') }}" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>Dashboard</p>
             </a>
           </li>
